@@ -1,0 +1,135 @@
+.portfolio-container {
+  background-color: black;
+  height: 100vh; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-logo,
+.game-logo {
+  text-align: center;
+  color: white; /* Adjust text color */
+  max-width: 80%; /* Limit the maximum width of the image */
+  max-height: 80%; /* Limit the maximum height of the image */
+  margin: auto; /* Center the image horizontally */
+  overflow: hidden;
+}
+
+.intro-logo img,
+.game-logo img {
+  max-width: 100%; /* Ensure the image does not exceed its container */
+  max-height: 100%; /* Ensure the image does not exceed its container */
+}
+
+.intro-logo h1 {
+  /* Style for the intro logo text */
+  animation: fade-out 5s ease-out forwards; /* Adjust animation duration */
+}
+.intro-logo img {
+  /* Style for the intro logo text */
+  animation: fade-out 5s ease-out forwards; /* Adjust animation duration */
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.music-toggle-button {
+  display: block;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1.2em;
+  font-size: 26px;
+  color: white;
+}
+
+.start-button {
+  position: absolute;
+  background-color: #0e722d; /* iOS-style blue */
+  color: #ffffff; /* White text color */
+  font-size: 26px;
+  font-weight: bold;
+  padding: 14px 24px; /* Increased padding for better touch targets */
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  margin: 20px auto; /* Center the button horizontally and provide some margin */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+.start-button:hover {
+  background-color: #357ae8; /* Darker shade of blue on hover */
+}
+
+/* For iOS Safari-specific styling */
+@supports (-webkit-touch-callout: none) {
+  .start-button {
+    -webkit-appearance: none;
+  }
+}
+
+.question-container {
+  position: absolute;
+  text-align: center;
+  color: white;
+  margin-top: 20px; /* Add margin to separate from intro */
+}
+
+.engaging-question {
+  font-size: 4em; /* Bigger text size */
+  color: white; /* White text color */
+  padding-inline: 1em;
+  margin-bottom: 20px; /* Add margin between question and options */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option {
+  margin-bottom: 10px; /* Add margin between options */
+}
+
+.option input[type="radio"] {
+  display: none; /* Hide radio buttons */
+}
+
+.option label {
+  display: inline-block;
+  background-color: #333; /* Darker background for options */
+  color: white; /* White text color */
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option label:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+.option input[type="radio"]:checked + label {
+  background-color: #4a90e2; /* Selected option background color */
+}
+
+.start-game-button {
+  margin: 2em;
+  padding: 1em;
+  width: 50%;
+  font-size: medium;
+}
